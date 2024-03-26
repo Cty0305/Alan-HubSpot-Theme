@@ -1,0 +1,111 @@
+[ {
+  "id" : "9605694f-300d-3cfd-fc27-4198379c8a03",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : true,
+  "type" : "text",
+  "default" : "The all-in-one Messge Center for teams"
+}, {
+  "id" : "69a13a3b-df44-7326-40b1-5f0c945de982",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Integrate with or build apps on top of our markerplace "
+}, {
+  "id" : "5ccaa57e-fa1f-ca36-5f91-b4b38de56299",
+  "name" : "button_enable_disable",
+  "display_width" : null,
+  "label" : "Button Enable/Disable",
+  "required" : false,
+  "locked" : false,
+  "display" : "toggle",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "e71c9d89-4875-a14c-c727-f33d9c7b43c9",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "5edd189b-dedf-c38f-d924-988e167c7f04",
+    "name" : "text",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Learn more"
+  }, {
+    "id" : "30ec4862-3e61-5348-bfe0-66636e21316d",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "#",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text" : "Learn more",
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "href" : "#",
+        "type" : "EXTERNAL"
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "660d60c9-be34-8e57-8d81-01434508adc6",
+  "name" : "image",
+  "display_width" : null,
+  "label" : "Image",
+  "inline_help_text" : "圖片尺寸：寬度固定1600px，高度不限 (.jpg) ",
+  "required" : true,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/img5.png",
+    "alt" : "img5",
+    "loading" : "lazy",
+    "width" : 616,
+    "height" : 250,
+    "max_width" : 616,
+    "max_height" : 250
+  }
+} ]

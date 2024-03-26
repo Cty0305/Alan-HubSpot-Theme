@@ -1,0 +1,22 @@
+<section class="connection space">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="connection__content">
+          <div class="heading">
+            <h2 class="section-title">
+              {{ module.title }}
+            </h2>
+            <p>{{ module.content }}</p>
+          </div>
+          {{ macro.btn(module.button.text, module.button.link, module.button_enable_disable, 'btn btn-secondary', 'right-arrow' ) }}
+        </div>
+      </div>
+      <div class="col">
+        <figure class="connection__img">
+          {{ macro.image(module.image) }}
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
