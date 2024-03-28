@@ -1,1 +1,8 @@
 hubspot.config.yml
+node_modules
+.*
+*.log
+*.swp
+Icon\\r
+__MACOSX
+~

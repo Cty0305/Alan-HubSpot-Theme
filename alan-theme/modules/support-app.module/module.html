@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ get_asset_url('/alan-theme/css/main.css') }}">
 <section class="connection space">
   <div class="container">
     <div class="row">
@@ -5,16 +6,39 @@
         <div class="connection__content">
           <div class="heading">
             <h2 class="section-title">
-              {{ module.title }}
+            {% inline_text field="title" value="{{ module.title }}" %}
             </h2>
-            <p>{{ module.content }}</p>
+            {% inline_text field="content" value="{{ module.content }}" %}
           </div>
-          {{ macro.btn(module.button.text, module.button.link, module.button_enable_disable, 'btn btn-secondary', 'right-arrow' ) }}
+          {% if module.button_enable_disable %}
+            <!-- HTML to show when checked -->
+          
+                    {% inline_text field="button.text" value="{{ module.button.text }}" %}
+          {% set href = module.button.link.url.href %}
+          {% if module.button.link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+          {% endif %}
+          <a href="{{ href|escape_url }}"
+            {% if module.button.link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if module.button.link.rel %}rel="{{ module.button.link.rel|escape_attr }}"{% endif %}
+            >
+            Link text
+          </a>
+                    {% endif %}
         </div>
       </div>
       <div class="col">
         <figure class="connection__img">
-          {{ macro.image(module.image) }}
+        {% if module.image.src %}
+          {% set sizeAttrs = 'width="{{ module.image.width|escape_attr }}" height="{{ module.image.height|escape_attr }}"' %}
+          {% if module.image.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ module.image.width|escape_attr }}" height="{{ module.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.image.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.image.max_width|escape_attr }}" height="{{ module.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+           {% set loadingAttr = module.image.loading != 'disabled' ? 'loading="{{ module.image.loading|escape_attr }}"' : '' %}
+          <img src="{{ module.image.src|escape_url }}" alt="{{ module.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
         </figure>
       </div>
     </div>

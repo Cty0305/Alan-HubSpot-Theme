@@ -1,8 +1,0 @@
-{
-  "global" : false,
-  "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "module_id" : 161556624142,
-  "label" : "logo-carousel",
-  "is_available_for_new_content" : true
-}

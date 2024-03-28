@@ -1,0 +1,152 @@
+[ {
+  "id" : "5443f668-6907-5e2b-df44-243095387ff0",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Igniting Love and Passion for Customer Choice, Since Day One"
+}, {
+  "id" : "0c3cd449-7b82-24e1-19e2-c4b2b7b76e84",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "94a2f32b-aac4-f00a-e1a4-0352c358c8ee",
+    "name" : "pull_bottom_content",
+    "display_width" : null,
+    "label" : "Pull Bottom Content",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "pull_bottom_content" : false
+  }
+}, {
+  "id" : "3144f47a-e418-d186-9800-594570931591",
+  "name" : "logos",
+  "display_width" : null,
+  "label" : "Logos",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 6,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : 6
+  },
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : null,
+    "controlling_value_regex" : null,
+    "property" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : null
+  },
+  "children" : [ {
+    "id" : "660cea83-4c45-afa5-9b1d-7c4d76cd5154",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "help_text" : "",
+    "inline_help_text" : "圖片建議尺寸：寬度不限，高度140px  (.png)",
+    "required" : true,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  }, {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "https://43901813.fs1.hubspotusercontent-na1.net/hubfs/43901813/logo1.png",
+      "alt" : "logo1",
+      "loading" : "lazy",
+      "width" : 133,
+      "height" : 102,
+      "max_width" : 133,
+      "max_height" : 102
+    }
+  } ]
+} ]

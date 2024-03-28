@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="{{ get_asset_url('/alan-theme/css/main.css') }}">
+
+<section class="choice {% if module.style.pull_bottom_content %} choice-bottom {% endif %}">
+  <div class="container">
+    <div class="choice__content">
+      <div class="choice__text">
+      {% inline_text field="title" value="{{ module.title }}" %}
+      </div>
+      <div class="swiper choice__swiper">
+        <div class="swiper-wrapper">
+          {% for item in module.logos %}
+          <div class="swiper-slide">
+            <div class="choice__img">
+            {% if item.image.src %}
+              {% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}"' %}
+              {% if item.image.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+              {% elif item.image.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.image.max_width|escape_attr }}" height="{{ item.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+               {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading|escape_attr }}"' : '' %}
+              <img src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
